@@ -1,0 +1,62 @@
+---
+title: "Indice de marginación a nivel municipal"
+author: "Diana Villasana"
+output: 
+  flexdashboard::flex_dashboard:
+    output_dir: docs
+    orientation: columns
+    vertical_layout: fill
+    self_contained: yes
+    mode: selfcontained
+    social: [ "twitter", "facebook", "linkedin" ]
+    source_code:  https://github.com/dvillasanao/IMM_2020_Leaflet
+    theme: 
+      version: 4
+      bg: "#FFFFFF"
+      fg: "#FDF7F7" 
+      primary: "#13322B"
+      navbar-bg: "#086953"
+      base_font: 
+        google: Prompt
+      heading_font:
+        google: Sen
+      code_font:
+        google: 
+          family: JetBrains Mono
+          local: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, cache=TRUE,
+                      class.source = "fold-hide")
+knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file())
+options(digits = 2, encoding = "UTF8")
+
+##librerias que se usaron 
+require(dplyr)
+require(spdplyr)
+require(forcats)
+require(htmltools)
+require(leaflet)
+require(htmlwidgets)
+require(ggmap)
+require(ggplot2)
+require(ggridges)
+require(grDevices)
+require(ggpubr)
+require(forcats)
+require(rgdal)
+require(tibble)
+require(sf)
+require(stringr)
+require(RColorBrewer)
+require(leafgl)
+require(leaflet.extras)
+require(mapview)
+```
+
+```{r}
+readRDS("Graficos/leaflet_municipios.RDS")
+```
+
