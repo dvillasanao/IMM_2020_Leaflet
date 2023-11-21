@@ -1,0 +1,8 @@
+[build]
+  command = "npm run build"  # Cambia esto si tu proyecto usa un script diferente para la construcción
+  publish = "docs"           # Cambia esto al directorio de despliegue de tu proyecto
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
